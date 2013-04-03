@@ -62,6 +62,7 @@ fresh jasoncodes/dotfiles shell/editor.sh
 
 fresh-options
   fresh twe4ked/dotfiles shell/exports.sh
+  fresh shell/exports.sh
   fresh twe4ked/dotfiles shell/aliases/\*
   fresh twe4ked/dotfiles shell/functions/\*
 fresh-options
