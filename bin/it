@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+arg=$1
+me=`basename $0`
+if [[ "$#" = "0" ]]; then
+  echo "Usage: '$me bookmarkname' or '$me list'" && exit 1
+elif [[ "$1" = "list" ]]; then
+  defaults read com.googlecode.iterm2|grep --color=never " Name"|grep -v "Default Arrangement Name"|awk '{$1="";$2="";print $0}'|tr -d ';'
+else
+  osascript <<ENDSCRIPT
+tell application "iTerm"
+  activate
+  tell the current terminal
+   launch session "$1"
+  end tell
+end tell
+ENDSCRIPT
+fi
