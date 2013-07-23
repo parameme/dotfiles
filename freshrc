@@ -52,6 +52,9 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh twe4ked/dotfiles vim/vimrc
   fresh jasoncodes/dotfiles vim/mappings/indent.vim
   fresh jasoncodes/dotfiles vim/config/tags.vim
+  fresh jasoncodes/dotfiles vim/config/cursor.vim
+  fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
+  fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
   fresh hackling/dotfiles vim/keybindings/numpad.vim
 fresh-options
 fresh twe4ked/dotfiles vim/gvimrc --file
