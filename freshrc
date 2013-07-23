@@ -101,6 +101,7 @@ fresh-options --bin
   fresh pengwynn/dotfiles bin/git-pr
   fresh defunkt/repl bin/repl
   fresh bin/\*
+  fresh hackling/morse bin/morse
 fresh-options
 
 # iTerm2
