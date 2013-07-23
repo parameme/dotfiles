@@ -98,6 +98,7 @@ fresh-options --bin
   fresh jasoncodes/dotfiles bin/\*
   fresh jasoncodes/dotfiles bin/wemux/\*
   fresh pengwynn/dotfiles bin/gxpr
+  fresh pengwynn/dotfiles bin/git-pr
   fresh defunkt/repl bin/repl
   fresh bin/\*
 fresh-options
