@@ -91,7 +91,7 @@ fresh-options --file=~/.gitignore --marker
   fresh github/gitignore Global/IntelliJ.gitignore
   fresh github/gitignore Global/OSX.gitignore
   fresh github/gitignore Global/RubyMine.gitignore
-  fresh github/gitignore Global/vim.gitignore
+  fresh github/gitignore Global/vim.gitignore --ref=eaa2ad5
   fresh github/gitignore Rails.gitignore
   fresh github/gitignore Ruby.gitignore
   fresh config/gitignore
