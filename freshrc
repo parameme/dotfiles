@@ -75,6 +75,7 @@ fresh-options
   fresh shell/exports.sh
   fresh twe4ked/dotfiles shell/aliases/\*
   fresh twe4ked/dotfiles shell/functions/\*
+  fresh shell/functions/\*
 fresh-options
 
 # irb
