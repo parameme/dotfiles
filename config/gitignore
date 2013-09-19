@@ -1,6 +1,7 @@
 .ruby-version
 notes/
 bundler_stubs/
+binstubs/
 db/schema.rb
 config/initializers/rubymine.rb
 notes@
