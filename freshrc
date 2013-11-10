@@ -103,9 +103,10 @@ fresh-options --bin
   fresh jasoncodes/dotfiles bin/wemux/\*
   fresh pengwynn/dotfiles bin/gxpr
   fresh pengwynn/dotfiles bin/git-pr
+  fresh git/git contrib/diff-highlight/diff-highlight
   fresh defunkt/repl bin/repl
-  fresh bin/\*
   fresh hackling/morse bin/morse
+  fresh bin/\*
 fresh-options
 
 # iTerm2

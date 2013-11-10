@@ -14,6 +14,7 @@ path_add "/usr/local/sbin"
 path_add "/usr/local/share/npm/bin"
 path_add "/usr/local/share/python"
 
+export PATH
 export RUBYMINE_APP=/Applications/RubyMine\ EAP.app
 export TEAMCITY_FORMATTER_FOLDERS=$RUBYMINE_APP/rb/testing/patch/common:$RUBYMINE_APP/rb/testing/patch/bdd
 export RUBYLIB=$RUBYLIB:$TEAMCITY_FORMATTER_FOLDERS
