@@ -9,8 +9,12 @@ fresh-options --file
   fresh twe4ked/dotfiles config/\*
   fresh jasoncodes/dotfiles config/inputrc
   fresh jasoncodes/dotfiles config/tmux.conf
+  fresh jasoncodes/dotfiles config/psqlrc
+  fresh config/\*
 fresh-options
+fresh twe4ked/dotfiles config/ranger/rc.conf --file=~/.config/ranger/rc.conf
 fresh henrik/dotfiles rubyrc --file=~/.pryrc --filter='cat; echo include RubyRC'
+fresh nathanaelkane/dotfiles config/tmux/ctrlg.conf --file=~/.tmux.conf
 
 # Zsh
 fresh-options --file=~/.zshrc --marker
@@ -20,26 +24,29 @@ fresh-options --file=~/.zshrc --marker
   fresh twe4ked/dotfiles shell/zsh/aliases.zsh
   fresh twe4ked/dotfiles shell/zsh/zshrc
   fresh twe4ked/dotfiles shell/zsh/keybindings.zsh
-  fresh shell/zsh/\*.zsh
 
   # this loads the shell files and needs to be at the bottom of the zshrc for
   # compdef be availiable
   fresh freshshell/fresh contrib/source-build.sh
+
+  fresh rupa/z z.sh
+  fresh robbyrussell/oh-my-zsh lib/edit-command-line.zsh --ref=a38774c
+  fresh robbyrussell/oh-my-zsh plugins/git-flow/git-flow.plugin.zsh --ref=df30eae
+  fresh bjeanes/dot-files shells/zsh/lib/completion-waiting-dots.zsh
+
+  # de-duplicate PATH
+  fresh akatov/dotfiles zshrc/dedup-path --ref=55e80fe
 fresh-options
 
 fresh zsh-users/zsh-completions src/_ack --file=completion/_ack
-fresh-options --file=~/.zshrc
-  fresh rupa/z z.sh
-  fresh sharat87/zsh-vim-mode zsh-vim-mode.plugin.zsh
-  fresh robbyrussell/oh-my-zsh lib/edit-command-line.zsh --ref=a38774c
-  fresh robbyrussell/oh-my-zsh plugins/git-flow/git-flow.plugin.zsh --ref=df30eae
-  fresh zsh-users/zsh-history-substring-search zsh-history-substring-search.zsh
-fresh-options
+fresh zsh-users/zsh-completions src/_heroku --file=completion/_heroku
+fresh robbyrussell/oh-my-zsh plugins/brew/_brew --file=completion/_brew --ref=55f09f8
+fresh twe4ked/dotfiles shell/zsh/completions/_gh --file=completion/_gh
 
 fresh zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh --file=vendor/zsh-syntax-highlighting.zsh
 fresh zsh-users/zsh-syntax-highlighting highlighters/main/main-highlighter.zsh --file=vendor/highlighters/main/main-highlighter.zsh
 fresh zsh-users/zsh-syntax-highlighting highlighters/brackets/brackets-highlighter.zsh --file=vendor/highlighters/brackets/brackets-highlighter.zsh
-fresh twe4ked/dotfiles shell/zsh/zsh-syntax-highlighting.zsh
+fresh twe4ked/dotfiles shell/zsh/zsh-syntax-highlighting.zsh --file=~/.zshrc
 
 # Vim
 fresh-options --file=~/.vimrc --marker=\"
@@ -50,17 +57,21 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh twe4ked/dotfiles vim/functions.vim
   fresh twe4ked/dotfiles vim/keybindings.vim
   fresh twe4ked/dotfiles vim/plugin_config/\*
+  fresh twe4ked/dotfiles vim/auto_commands.vim
   fresh twe4ked/dotfiles vim/vimrc
   fresh jasoncodes/dotfiles vim/mappings/indent.vim
+  fresh jasoncodes/dotfiles vim/mappings/pasteboard.vim
+  fresh jasoncodes/dotfiles vim/config/undo.vim
   fresh jasoncodes/dotfiles vim/config/tags.vim
+  fresh jasoncodes/dotfiles vim/config/marked.vim
+  fresh jasoncodes/dotfiles vim/config/auto_mkdir.vim
+  fresh jasoncodes/dotfiles vim/config/search.vim
   fresh jasoncodes/dotfiles vim/config/cursor.vim
   fresh jasoncodes/dotfiles vim/config/bubbling.vim
-  fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
-  fresh hackling/dotfiles vim/plugins/surround.vim
-  fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
-  fresh jasoncodes/dotfiles vim/mappings/pasteboard.vim
-  fresh jasoncodes/dotfiles vim/config/fast_escape.vim
-  fresh jasoncodes/dotfiles vim/config/locksmith.vim
+  fresh jasoncodes/dotfiles vim/functions.vim
+  # Ruby autocommands
+  fresh jasoncodes/dotfiles vim/plugins/ruby.vim --filter='sed -n 11,13p' --ref=da7d4a8
+  fresh nathanaelkane/dotfiles vim/plugins/easymotion.vim
   fresh hackling/dotfiles vim/keybindings/numpad.vim
 fresh-options
 fresh twe4ked/dotfiles vim/gvimrc --file
@@ -69,12 +80,17 @@ fresh twe4ked/dotfiles vim/colors --file=~/.vim/colors/
 # Shell
 fresh jasoncodes/dotfiles shell/aliases/\*
 fresh jasoncodes/dotfiles shell/editor.sh
+fresh jasoncodes/dotfiles shell/config/chruby.sh
+fresh jasoncodes/dotfiles shell/config/filters.sh
+fresh jasoncodes/dotfiles shell/config/pager.sh
+fresh jasoncodes/dotfiles shell/config/heroku.sh
+fresh jasoncodes/dotfiles shell/config/tmux.sh
+fresh jasoncodes/dotfiles shell/functions/realpath.sh
+fresh markryall/dotfiles shell/aliases/dvcs.sh
 
-fresh-options
-  fresh shell/exports.sh
-  fresh twe4ked/dotfiles shell/aliases/\*
-  fresh twe4ked/dotfiles shell/functions/\*
-fresh-options
+fresh shell/exports.sh
+fresh twe4ked/dotfiles shell/aliases/\*
+fresh twe4ked/dotfiles shell/functions/\*
 
 # irb
 fresh-options --file=~/.irbrc
@@ -83,29 +99,27 @@ fresh-options --file=~/.irbrc
   fresh twe4ked/dotfiles config/irb/prompt.rb
 fresh-options
 
-# git
-fresh-options --file=~/.gitignore --marker
-  fresh github/gitignore Global/Archives.gitignore
-  fresh github/gitignore Global/JetBrains.gitignore
-  fresh github/gitignore Global/OSX.gitignore
-  fresh github/gitignore Global/vim.gitignore --ref=eaa2ad5
-  fresh github/gitignore Rails.gitignore
-  fresh github/gitignore Ruby.gitignore
-  fresh config/gitignore
-fresh-options
-
 # bin
 fresh-options --bin
   fresh twe4ked/dotfiles bin/\*
   fresh jasoncodes/dotfiles bin/\*
   fresh jasoncodes/dotfiles bin/wemux/\*
   fresh pengwynn/dotfiles bin/gxpr
-  fresh pengwynn/dotfiles bin/git-pr
-  fresh git/git contrib/diff-highlight/diff-highlight
+  fresh pengwynn/dotfiles bin/git-go
+  fresh pengwynn/dotfiles bin/+x
   fresh defunkt/repl bin/repl
   fresh hackling/morse bin/morse
   fresh bin/\*
 fresh-options
+fresh sivel/speedtest-cli speedtest_cli.py --bin=~/bin/speedtest
 
-# iTerm2
-fresh iterm2 --file=~/.iterm2/
+# git hooks
+fresh https://gist.github.com/5431107.git pre-commit --bin=~/bin/_git-pre-commit-hook
+mkdir -p ~/.git_template/hooks/
+ln -sf ~/bin/_git-pre-commit-hook ~/.git_template/hooks/pre-commit
+
+fresh_after_build() {
+  if which chflags &> /dev/null; then
+    chflags hidden ~/bin
+  fi
+}

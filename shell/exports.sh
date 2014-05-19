@@ -17,5 +17,3 @@ export RUBYMINE_APP=/Applications/RubyMine.app
 export TEAMCITY_FORMATTER_FOLDERS=$RUBYMINE_APP/rb/testing/patch/common:$RUBYMINE_APP/rb/testing/patch/bdd
 export RUBYLIB=$RUBYLIB:$TEAMCITY_FORMATTER_FOLDERS
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
