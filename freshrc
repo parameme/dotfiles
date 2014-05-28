@@ -80,23 +80,34 @@ fresh twe4ked/dotfiles vim/colors --file=~/.vim/colors/
 # Shell
 fresh jasoncodes/dotfiles shell/aliases/\*
 fresh jasoncodes/dotfiles shell/editor.sh
-fresh jasoncodes/dotfiles shell/config/chruby.sh
 fresh jasoncodes/dotfiles shell/config/filters.sh
 fresh jasoncodes/dotfiles shell/config/pager.sh
 fresh jasoncodes/dotfiles shell/config/heroku.sh
 fresh jasoncodes/dotfiles shell/config/tmux.sh
 fresh jasoncodes/dotfiles shell/functions/realpath.sh
+fresh jasoncodes/dotfiles shell/config/chruby.sh
 fresh markryall/dotfiles shell/aliases/dvcs.sh
 
-fresh shell/exports.sh
 fresh twe4ked/dotfiles shell/aliases/\*
-fresh twe4ked/dotfiles shell/functions/\*
+#fresh twe4ked/dotfiles shell/functions/\*
+fresh shell/exports.sh
 
 # irb
 fresh-options --file=~/.irbrc
   fresh twe4ked/dotfiles config/irb/encoding.rb
   fresh jasoncodes/dotfiles config/irbrc
   fresh twe4ked/dotfiles config/irb/prompt.rb
+fresh-options
+
+# git
+fresh-options --file=~/.gitignore --marker
+  fresh github/gitignore Global/Archives.gitignore
+  fresh github/gitignore Global/JetBrains.gitignore
+  fresh github/gitignore Global/OSX.gitignore
+  fresh github/gitignore Global/vim.gitignore --ref=eaa2ad5
+  fresh github/gitignore Rails.gitignore
+  fresh github/gitignore Ruby.gitignore
+  fresh config/gitignore
 fresh-options
 
 # bin
@@ -109,6 +120,7 @@ fresh-options --bin
   fresh pengwynn/dotfiles bin/+x
   fresh defunkt/repl bin/repl
   fresh hackling/morse bin/morse
+  fresh git/git contrib/diff-highlight/diff-highlight
   fresh bin/\*
 fresh-options
 fresh sivel/speedtest-cli speedtest_cli.py --bin=~/bin/speedtest
