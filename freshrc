@@ -86,6 +86,7 @@ fresh jasoncodes/dotfiles shell/config/heroku.sh
 fresh jasoncodes/dotfiles shell/config/tmux.sh
 fresh jasoncodes/dotfiles shell/functions/realpath.sh
 fresh jasoncodes/dotfiles shell/config/chruby.sh
+fresh jasoncodes/dotfiles shell/config/direnv.sh
 fresh markryall/dotfiles shell/aliases/dvcs.sh
 
 fresh twe4ked/dotfiles shell/aliases/\*
