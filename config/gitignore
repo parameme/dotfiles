@@ -7,3 +7,4 @@ config/initializers/rubymine.rb
 notes@
 notes
 .rbenv-vars
+.envrc
