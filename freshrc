@@ -10,6 +10,7 @@ fresh-options --file
   fresh jasoncodes/dotfiles config/inputrc
   fresh jasoncodes/dotfiles config/tmux.conf
   fresh jasoncodes/dotfiles config/psqlrc
+  fresh jasoncodes/dotfiles config/gemrc
   fresh config/\*
 fresh-options
 fresh twe4ked/dotfiles config/ranger/rc.conf --file=~/.config/ranger/rc.conf
