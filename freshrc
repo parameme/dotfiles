@@ -6,7 +6,6 @@ fresh freshshell/fresh-open bin/fresh-open --bin
 
 # Config
 fresh-options --file
-  fresh twe4ked/dotfiles config/\*
   fresh jasoncodes/dotfiles config/inputrc
   fresh jasoncodes/dotfiles config/tmux.conf
   fresh jasoncodes/dotfiles config/psqlrc
