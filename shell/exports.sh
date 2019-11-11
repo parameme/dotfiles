@@ -10,7 +10,8 @@ path_add() {
   fi
 }
 
-path_add "/usr/local/sbin"
-path_add "/usr/local/share/npm/bin"
+export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:/usr/local/share/npm/bin
 
 export RUBYMINE_PROPERTIES=~/opt/jetbrains/rubymine/idea.properties
+export PATH=$PATH:~/opt/jetbrains/toolbox/bin
