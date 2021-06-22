@@ -10,10 +10,11 @@ fresh-options --file
   fresh jasoncodes/dotfiles config/tmux.conf
   fresh jasoncodes/dotfiles config/psqlrc
   fresh jasoncodes/dotfiles config/gemrc
-  fresh jasoncodes/dotfiles config/gitconfig
 fresh-options
-fresh twe4ked/dotfiles config/ranger/rc.conf --file=~/.config/ranger/rc.conf
-fresh nathanaelkane/dotfiles config/tmux/ctrlg.conf --file=~/.tmux.conf
+
+fresh-options --file=~/.gitconfig --marker
+  fresh config/gitconfig
+fresh-options
 
 # Zsh
 fresh-options --file=~/.zshrc --marker

@@ -1,0 +1,86 @@
+# Set your name and email with the following:
+#   git config -f ~/.gitconfig.local user.name "John Appleseed"
+#   git config -f ~/.gitconfig.local user.email me@example.com
+
+[color]
+ui = auto
+
+[diff]
+colorMoved = default
+
+[color "diff"]
+commit = yellow reverse
+
+[init]
+defaultBranch = main
+
+[core]
+excludesfile = ~/.gitignore
+
+[push]
+default = tracking
+
+[merge]
+log = true
+conflictstyle = diff3
+tool = vimdiff
+
+[rerere]
+enabled = 1
+
+[diff]
+compactionHeuristic = true
+
+[difftool "vimdiff"]
+cmd = vimdiff $LOCAL $REMOTE
+
+[mergetool]
+prompt = false
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+
+[rebase]
+autosquash = true
+autostash = true
+
+[tag]
+sort = version:refname
+
+[git-up "bundler"]
+check = true
+
+[git-up "rebase"]
+auto = false
+
+[gitflow "branch"]
+master = master
+develop = develop
+
+[gitflow "prefix"]
+feature = feature/
+release = release/
+hotfix = hotfix/
+support = support/
+versiontag =
+
+[git-up "rebase"]
+arguments = --preserve-merges
+
+[include]
+path = ~/.gitconfig.local
