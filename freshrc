@@ -30,9 +30,6 @@ fresh-options --file=~/.zshrc --marker
   fresh robbyrussell/oh-my-zsh plugins/git-flow/git-flow.plugin.zsh --ref=df30eae
   fresh bjeanes/dot-files shells/zsh/lib/completion-waiting-dots.zsh
 
-  # de-duplicate PATH
-  fresh akatov/dotfiles zshrc/dedup-path --ref=55e80fe
-
   fresh shell/zsh/zshrc.zsh
 
   # this loads the shell files and needs to be at the bottom of the zshrc for
