@@ -1,5 +1,6 @@
 export DOTFILES=~/.dotfiles                 # here
 export ARCHFLAGS='-arch x86_64'             # archflags
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" # ruby-build to link Homebrew's OpenSSL (updated)
 export GREP_OPTIONS='--color=auto'          # double rainbow!
 export PATH=$HOME/bin:/usr/local/bin:$PATH  # path settings
 export GH_LOGIN=parameme                    # used by git-go
@@ -13,5 +14,6 @@ path_add() {
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/usr/local/share/npm/bin
 
+export JAVA_HOME=$(/usr/libexec/java_home)
 export RUBYMINE_PROPERTIES=~/opt/jetbrains/rubymine/idea.properties
 export PATH=$PATH:~/opt/jetbrains/toolbox/bin
