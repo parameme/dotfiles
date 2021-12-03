@@ -10,10 +10,7 @@ fresh-options --file
   fresh jasoncodes/dotfiles config/tmux.conf
   fresh jasoncodes/dotfiles config/psqlrc
   fresh jasoncodes/dotfiles config/gemrc
-fresh-options
-
-fresh-options --file=~/.gitconfig --marker
-  fresh config/gitconfig
+  fresh jasoncodes/dotfiles config/gitconfig
 fresh-options
 
 # Zsh
